@@ -6,7 +6,8 @@ type schema = {
   resolvers: string
 };
 
-let makeExecutableSchema = ({typeDefs, resolvers}) => {
-  let schema = {"typeDefs": typeDefs, "resolvers": resolvers};
-  JSGraphQLTools.makeExecutableSchema(schema);
-};
+let makeExecutableSchema = ({typeDefs, resolvers}) =>
+  JSGraphQLTools.makeExecutableSchema({
+    "typeDefs": typeDefs,
+    "resolvers": resolvers
+  });
